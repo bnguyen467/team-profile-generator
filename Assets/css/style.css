@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+.myTeam{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 80px;
+    margin-top: -2rem;
+    margin-bottom: -1rem;
+}
+
+.card{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    width: 18rem;
+}
+
+.icon{
+    color: blue;
+    font-size: 36px;
+}

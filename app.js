@@ -37,7 +37,6 @@ const buildEngineer = data =>
         ])
         .then( ({github}) => {
             members.push(new Engineer(data.name, data.id, data.email, github))
-            console.log(members);
             moreMember();
         })
         .catch(error => { console.log(error) })
@@ -55,7 +54,6 @@ const buildManager = (data) =>
     ])
     .then( ({number}) => {
         members.push(new Manager(data.name, data.id, data.email, number))
-        console.log(members);
         moreMember();
     })
     .catch(error => { console.log(error) })
@@ -73,7 +71,6 @@ const buildIntern = (data) =>
     ])
     .then( ({school}) => {
         members.push(new Intern(data.name, data.id, data.email, school))
-        console.log(members);
         moreMember();
     })
     .catch(error => { console.log(error) })
@@ -97,8 +94,7 @@ const moreMember = () =>
                 addMember();
                 break;
             case 'No':
-                const html = render(members);
-                fs.writeFileSync(outputPath, html);
+                createFile();
                 break;
         }
     })
@@ -150,3 +146,17 @@ const addMember = () =>
 }
 
 addMember();
+
+// Function to check if there is 'output' folder, if no, create output folder.
+// then create and write team.html
+const createFile = () => {
+    fs.access('./output', function(error){
+        if(error)   // Directory does not exist
+        {
+            fs.mkdirSync('./output');
+        }
+
+        const html = render(members);
+        fs.writeFileSync(outputPath, html);
+    })
+}
