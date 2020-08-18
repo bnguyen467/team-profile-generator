@@ -14,7 +14,7 @@ The application uses:
 3. To run the application, run the command "node app.js"
 
 ## Tests
-The application uses npm jest for tests. Therefore, run the comman "npm run test" to test the application.
+The application uses npm jest for tests. Therefore, run the command "npm run test" to test the application.
 
 ## Questions
 Find me on github: [bnguyen467](https://github.com/bnguyen467)
@@ -23,5 +23,6 @@ Contact me through email: 467bnguyen@gmail.com
 
 ### This is how the application looks like in the VS Code terminal
 **Follow the link to the video for more details:** https://www.youtube.com/watch?v=IGQ_98Q1VLA&feature=youtu.be
+</br>
 ![example output](./Assets/images/output-example.png)
 
